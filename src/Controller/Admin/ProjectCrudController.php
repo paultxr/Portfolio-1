@@ -18,8 +18,10 @@ class ProjectCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextField::new('url'),
+            TextField::new('urlGitHub'),
             TextField::new('picture'),
             TextField::new('description'),
+            TextField::new('techno'),
         ];
     }
 }

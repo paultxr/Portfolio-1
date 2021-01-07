@@ -31,8 +31,9 @@
       font-size: 3rem;
     }
   }
-  .presentation-section{
+.presentation-section{
     background-color: white;
+    align-items: center;
   }
 .title-project{
   text-align: center;
@@ -51,4 +52,7 @@
     background-color: #150941;
     color: white;
     width: 40%;
+}
+.size-picture{
+  width: 100%;
 }

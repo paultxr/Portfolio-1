@@ -37,6 +37,16 @@ class Project
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $techno;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $urlGitHub;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Project
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getTechno(): ?string
+    {
+        return $this->techno;
+    }
+
+    public function setTechno(string $techno): self
+    {
+        $this->techno = $techno;
+
+        return $this;
+    }
+
+    public function getUrlGitHub(): ?string
+    {
+        return $this->urlGitHub;
+    }
+
+    public function setUrlGitHub(string $urlGitHub): self
+    {
+        $this->urlGitHub = $urlGitHub;
 
         return $this;
     }

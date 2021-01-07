@@ -4,17 +4,21 @@
 
 {% block body %}
 <section class="welcome-section">
-    <article class="contain">
-        <section class="presentation-section">
-            <section>
-                <img src="{{ asset('build/Julien.png') }}" alt="Julien"/>
+    <div class="container-fluid justify-content-around align-items-center ">
+        <div class="row">
+            <section class="col-md-8 presentation-section">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="size-picture" src="https://i.postimg.cc/jjdWmKp4/Julien.png" alt="Julien"/>
+                    </div>
+                    <div class="col-md-8">
+                        <h1>Hi, Je suis Julien</h1>
+                        <p><em>un dévelopeur web</em></p>
+                    </div>
+                </div>
             </section>
-            <section>
-                <h1>Hi, Je suis Julien</h1>
-                <p><em>un dévelopeur web</em></p>
-            </section>
-        </section>
-    </article>
+        </div>
+    </div>
 </section>
 <section class="projects-section">
     <h1 class="title-project"> Mes projets</h1>
@@ -27,7 +31,9 @@
                     <div class="card-body">
                     <h5 class="card-title">{{ project.name }}</h5>
                     <p class="card-text">{{ project.description }}</p>
+                    <p class="card-text">Technologies utilisées: {{ project.techno }}</p>
                     <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
+                    <a href="{{ project.urlGitHub }}" class="btn btn-primary color-button">Lien Git Hub</a>
                     </div>
                 </div>
             </div>
@@ -40,8 +46,8 @@
         <h2>Let's work together...</h2>
         <p>Quality | Results | Impression</p>
         <section class="contacts">
-          <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="contact-btn" target="_blank">LinkedIn</a>
-          <a id="profile-link" href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="contact-btn" target="_blank">freeCodeCamp</a>
+          <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/julienWillette" class="contact-btn" target="_blank"><i class="fab fa-github"></i></a>
           <a href="#" class="contact-btn" target="_blank">Twitter</a>
           <a href="#" class="contact-btn" target="_blank">Email</a>
           <a href="#" class="contact-btn" target="_blank">Call me</a>
