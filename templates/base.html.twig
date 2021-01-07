@@ -10,60 +10,28 @@
         {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <div class="col-4">
-            <a class="navbar-brand" href="{{ path('home')}}"><img src="https://zupimages.net/up/20/52/ju4k.jpg" alt="home" class="logo"></a>
-          </div>
-            <a class="navbar-brand" href="#">A propos</a>
-            <a class="navbar-brand" href="#">Projets</a>
-            <a class="navbar-brand" href="#">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row justify-content-around align-items-center">
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
+      
         {% block body %}{% endblock %}
-        <footer class="footer footer-bg d-none d-lg-block pb-4">
-          <div class="container justify-fluid-content-around pt-2">
-              <div class="row align-items-center">
-                  <div class="col-lg-4">
-                      <div class="row">
-                          <div class="col-md-12">
-                              <a class="footer-brand" href="{{ path('home')}}"><img src="https://zupimages.net/up/20/52/ju4k.jpg" alt="home" class="logo">
-                                  <hr class="hr-color">
-                              <div class="container-fluid mt-4">
-                                  <a class="space" href=""><img src="https://zupimages.net/up/20/51/td5h.png" class="reseau-footer" alt="logo-phone"></a>
-                                  <a class="space" href=""><img src="https://zupimages.net/up/20/51/yvjh.png" class="reseau-footer" alt="logo-mail"></a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 mt-1">
-                      <h3 class="pt-3 information-style">Informations</h3>
-                      <hr class="hr-color">
-                      <div class="row">
-                          <div class="col-md-12">
-                              <a class="footer-information" href="">Contact</a>
-                              <br>
-                              <a class="footer-information" href="">Faq</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 mt-3">
-                      <h3 class="links-style information-style">Nous suivre</h3>
-                      <hr class="hr-color">
-                      <div class="row">
-                          <div class="col-md-12">
-                              <div class="container-fluid mt-3">
-                                  <a class="space" href=""><img src="https://zupimages.net/up/20/51/lxhz.png" class="reseau-footer" alt="logo-facebook"></a>
-                                  <a class="space" href=""><img src="https://zupimages.net/up/20/51/vp0u.png" class="reseau-footer" alt="logo-instagram"></a>
-                                  <a class="space" href=""><img src="https://zupimages.net/up/20/10/igmc.png" class="reseau-footer" alt="logo-twitter"></a>
-                                  <a class="space" href=""><img src="https://zupimages.net/up/19/22/qqdi.png" class="reseau-footer" alt="logo-linkedin"></a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </footer>
+    <footer>
+          
+    </footer>
         {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
     </body>
 </html>

@@ -3,39 +3,49 @@
 {% block title %}Project index{% endblock %}
 
 {% block body %}
-    <h1>Project index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Url</th>
-                <th>Picture</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for project in projects %}
-            <tr>
-                <td>{{ project.id }}</td>
-                <td>{{ project.name }}</td>
-                <td>{{ project.url }}</td>
-                <td>{{ project.picture }}</td>
-                <td>{{ project.description }}</td>
-                <td>
-                    <a href="{{ path('project_show', {'id': project.id}) }}">show</a>
-                    <a href="{{ path('project_edit', {'id': project.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('project_new') }}">Create new</a>
+<section class="welcome-section">
+    <article class="contain">
+        <section class="presentation-section">
+            <section>
+                <img src="{{ asset('build/Julien.png') }}" alt="Julien"/>
+            </section>
+            <section>
+                <h1>Hi, Je suis Julien</h1>
+                <p><em>un dévelopeur web</em></p>
+            </section>
+        </section>
+    </article>
+</section>
+<section class="projects-section">
+    <h1 class="title-project"> Mes projets</h1>
+    <div class="container container-licence">
+        <div class="row justify-content-around align-items-center">
+            {% for project in projects %}
+            <div class="col-lg-4 col-md-4 col-xs-6 m-4">
+                <div class="cards-color" style="width: 18rem;">
+                    <img src="{{ project.picture }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="welcome-section">
+    <article class="contain center">
+        <h2>Let's work together...</h2>
+        <p>Quality | Results | Impression</p>
+        <section class="contacts">
+          <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="contact-btn" target="_blank">LinkedIn</a>
+          <a id="profile-link" href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="contact-btn" target="_blank">freeCodeCamp</a>
+          <a href="#" class="contact-btn" target="_blank">Twitter</a>
+          <a href="#" class="contact-btn" target="_blank">Email</a>
+          <a href="#" class="contact-btn" target="_blank">Call me</a>
+        </section>
+      </article>
+</section>
 {% endblock %}

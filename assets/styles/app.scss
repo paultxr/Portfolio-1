@@ -3,15 +3,52 @@
 
 // navbar //
 
-.logo{
-    width: 10%;
+.nav-link{
+    color: white;
+    font-family:  'Raleway', sans-serif;
+    font-weight: bold;
+    box-shadow: none;
+    font-size: 30px;
+    margin-right: 15px;
 }
 
-.footer{
-    background-color: lightgray;
+.welcome-section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #68b8c1;
+    text-shadow: 1px 1px 5px var(--color-darker);
+    h1 {
+      color: #150941;
+      font-size: 6rem;
+      margin: 3rem 0;
+    }
+    p {
+      color: var(--color-light);
+      font-size: 3rem;
+    }
+  }
+  .presentation-section{
+    background-color: white;
+  }
+.title-project{
+  text-align: center;
 }
 
-.reseau-footer{
-    width: 10%;
+.project-section{
+    height: 100vh;
+    width: 100%;
 }
-
+.color-button{
+    background-color: #68b8c1;
+    color: #150941;
+    border: #150941;
+}
+.cards-color{
+    background-color: #150941;
+    color: white;
+    width: 40%;
+}
