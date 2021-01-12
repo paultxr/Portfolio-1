@@ -1,57 +1,63 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Project index{% endblock %}
-
 {% block body %}
-<section class="welcome-section">
-    <div class="container-fluid justify-content-around align-items-center ">
-        <div class="row">
-            <section class="col-md-8 presentation-section">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="size-picture" src="https://i.postimg.cc/jjdWmKp4/Julien.png" alt="Julien"/>
-                    </div>
-                    <div class="col-md-8">
-                        <h1>Hi, Je suis Julien</h1>
-                        <p><em>un dévelopeur web</em></p>
-                    </div>
-                </div>
-            </section>
+<body>
+<div class="img-background" style="background-image: url('https://i.postimg.cc/3JPjfXgK/nasa-Q1p7bh3-SHj8-unsplash.jpg')">
+    <div class="wrapper">
+        <div class="content">
+            <h1 class="section-me">Bonjour, je suis Julien</h1>
+            <p class="subtile">Bienvenue sur mon portfolio !</p>
         </div>
     </div>
-</section>
-<section class="projects-section">
+</div>
+<div class="container-fluid presentation-section">
+    <div class="container presentation-section">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-3 section-picture">
+                <img src="https://i.postimg.cc/jjdWmKp4/Julien.png" class="rounded-circle size-picture" alt="Photo Julien Willette">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-3 section-description">
+                <p class="description"> Actuellement en reconversion professionelle, 
+                    j'ai suivi une formation de 5 mois spécialisé en PHP. Je souhaite à présent approfondir mes connaisances en JS en suivant une 
+                    formation proffesionelle d'un an spécialisé en Node, Js, React.
+                    Je suis à la recherche d'une entreprise en alternance 
+                    qui se déroule d'avril 2021 à avril 2022.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container-fluide img-background" style="background-image: url('https://i.postimg.cc/QVGRRpFH/guillermo-ferla-Oze6-U2m1o-YU-unsplash.jpg')">
     <h1 class="title-project"> Mes projets</h1>
-    <div class="container container-licence">
-        <div class="row justify-content-around align-items-center">
-            {% for project in projects %}
-            <div class="col-lg-4 col-md-4 col-xs-6 m-4">
-                <div class="cards-color" style="width: 18rem;">
-                    <img src="{{ project.picture }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">{{ project.name }}</h5>
+    <div class="row m-3 justify-content-around align-items-center text-center">
+        {% for project in projects %}
+            <div class="card mt-2 col-lg-6 col-md-3 col-sm-6 col-xs-4 cards-color" style="width: 20rem;">
+                <img src="{{ project.picture }}" class="img-fluid" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">{{ project.name }}</h4>
                     <p class="card-text">{{ project.description }}</p>
                     <p class="card-text">Technologies utilisées: {{ project.techno }}</p>
-                    <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
-                    <a href="{{ project.urlGitHub }}" class="btn btn-primary color-button">Lien Git Hub</a>
+                    <div class="justify-content-around">
+                        <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
+                        <a href="{{ project.urlGitHub }}" class="btn btn-primary color-button">Lien Git Hub</a>
                     </div>
                 </div>
             </div>
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
 </section>
-<section class="welcome-section">
+<section class="contact-section">
     <article class="contain center">
         <h2>Let's work together...</h2>
         <p>Quality | Results | Impression</p>
         <section class="contacts">
-          <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/julienWillette" class="contact-btn" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="#" class="contact-btn" target="_blank">Twitter</a>
-          <a href="#" class="contact-btn" target="_blank">Email</a>
-          <a href="#" class="contact-btn" target="_blank">Call me</a>
+            <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="linkedin-btn" target="_blank"><img src="" alt=""></i></a>
+            <a href="https://github.com/julienWillette" class="contact-btn" target="_blank"><img src="" alt=""></i></a>
+            <a href="#" class="contact-btn" target="_blank">Twitter</a>
+            <a href="#" class="contact-btn" target="_blank">Email</a>
+            <a href="#" class="contact-btn" target="_blank">Call me</a>
         </section>
       </article>
 </section>
+</body>
 {% endblock %}
