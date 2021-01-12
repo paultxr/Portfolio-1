@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid presentation-section">
+<div class="container-fluid presentation-section" id="Présentation">
     <div class="container presentation-section">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-3 section-picture">
@@ -27,37 +27,45 @@
     </div>
 </div>
 
-<section class="container-fluide img-background" style="background-image: url('https://i.postimg.cc/QVGRRpFH/guillermo-ferla-Oze6-U2m1o-YU-unsplash.jpg')">
-    <h1 class="title-project"> Mes projets</h1>
-    <div class="row m-3 justify-content-around align-items-center text-center">
+<div class="container-fluide img-background" style="background-image: url('https://i.postimg.cc/QVGRRpFH/guillermo-ferla-Oze6-U2m1o-YU-unsplash.jpg')">
+    <h1 class="title-project" id="Projets"> Mes projets</h1>
+    <div class="row justify-content-around align-items-center text-center">
         {% for project in projects %}
-            <div class="card mt-2 col-lg-6 col-md-3 col-sm-6 col-xs-4 cards-color" style="width: 20rem;">
-                <img src="{{ project.picture }}" class="img-fluid" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">{{ project.name }}</h4>
-                    <p class="card-text">{{ project.description }}</p>
-                    <p class="card-text">Technologies utilisées: {{ project.techno }}</p>
-                    <div class="justify-content-around">
-                        <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
-                        <a href="{{ project.urlGitHub }}" class="btn btn-primary color-button">Lien Git Hub</a>
-                    </div>
+        <div class="card col-lg-6 col-md-3 col-sm-6 col-xs-4 cards-color" style="width: 22rem;">
+            <img src="{{ project.picture }}" class="img-fluid cards-img" alt="{{ project.picture }}">
+            <div class="card-body">
+                <h4 class="card-title">{{ project.name }}</h4>
+                <p class="card-text">{{ project.description }}</p>
+                <p class="card-text">Technologies utilisées:</p>
+                <p class="card-text">{{ project.techno }}</p>
+                <div class="justify-content-around">
+                    <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
+                    <a href="{{ project.urlGitHub }}" class="btn btn-primary color-button">Lien Git Hub</a>
                 </div>
             </div>
+        </div>
         {% endfor %}
     </div>
-</section>
-<section class="contact-section">
-    <article class="contain center">
-        <h2>Let's work together...</h2>
-        <p>Quality | Results | Impression</p>
-        <section class="contacts">
-            <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="linkedin-btn" target="_blank"><img src="" alt=""></i></a>
-            <a href="https://github.com/julienWillette" class="contact-btn" target="_blank"><img src="" alt=""></i></a>
-            <a href="#" class="contact-btn" target="_blank">Twitter</a>
-            <a href="#" class="contact-btn" target="_blank">Email</a>
-            <a href="#" class="contact-btn" target="_blank">Call me</a>
-        </section>
-      </article>
-</section>
+</div>
+
+<div class="contact-section" id="Contact">
+    <br>
+    <br>
+    <div class="container-fluide">
+        <div class="row">
+            <h2 class="title-project">Contact</h2>
+            <p class="contact">Qualité | Résultats | Impréssions</p>
+            <section class="contact">
+                <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="linkedin-btn" target="_blank">Linkedin</a>
+                <a href="https://github.com/julienWillette" class="contact-btn" target="_blank">Github</a>
+                <a href="#" class="contact-btn" target="_blank">Twitter</a>
+                <a href="#" class="contact-btn" target="_blank">Email</a>
+                <a href="#" class="contact-btn" target="_blank">Call me</a>
+            </section>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
 </body>
 {% endblock %}

@@ -78,6 +78,8 @@
     align-items: center;
   }
 
+  //-----project------
+
 .title-project{
   text-align: center;
   vertical-align: middle;
@@ -86,28 +88,39 @@
   font-size: 65px;
   }
 
+ //-----cards------
+
 .color-button{
-    background-color: #68b8c1;
+    background-color: #FFBF00;
     color: #150941;
     border: #150941;
 }
 .cards-color{
-    background-color: #150941;
-    color: white;
+    background-color: #48608f;
+    color: #FFBF00;
+    margin: 5em;
 }
 
-.linkedin-btn{
-  background-color: blue;
-  color: blue;
+.cards-img{
+  width: 100%;
 }
+
+
+//-----contact-----
 
 .contact-section{
+  color: #FFBF00;
   background-color: #48608f;
-  height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 1px 1px 5px var(--color-darker);
-  }
+  font-family:  'Raleway', sans-serif;
+  font-weight: bold;
+  box-shadow: none;
+  font-size: 23px;
+}
+
+.contact{
+  text-align: center;
+  vertical-align: middle;
+  color: #FFBF00;
+  font-family:  'Raleway', sans-serif;
+  font-size: 30px;
+}
