@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block title %}Project index{% endblock %}
 {% block body %}
-<body>
 <div class="img-background" style="background-image: url('https://i.postimg.cc/3JPjfXgK/nasa-Q1p7bh3-SHj8-unsplash.jpg')">
     <div class="wrapper">
         <div class="content">
@@ -18,8 +17,9 @@
             </div>
             <div class="col-lg-8 col-md-8 col-sm-6 col-xs-3 section-description">
                 <p class="description"> Actuellement en reconversion professionelle, 
-                    j'ai suivi une formation de 5 mois spécialisé en PHP. Je souhaite à présent approfondir mes connaisances en JS en suivant une 
-                    formation proffesionelle d'un an spécialisé en Node, Js, React.
+                    j'ai suivi une formation de 5 mois spécialisé en PHP. 
+                    Je souhaite à présent approfondir mes connaisances en JS en suivant une 
+                    formation profesionelle d'un an spécialisée en Node, Js, React.
                     Je suis à la recherche d'une entreprise en alternance 
                     qui se déroule d'avril 2021 à avril 2022.</p>
             </div>
@@ -41,12 +41,35 @@
                 <div class="justify-content-around">
                     <a href="{{ project.url }}" class="btn btn-primary color-button">Lien du site</a>
                     <a href="{{ project.urlGitHub }}" class="btn btn-primary color-button">Lien Git Hub</a>
+                    <button type="button" class="btn btn-light read-more" data-toggle="modal"
+                        data-target="#modal-{{project.id}}">en savoir plus</button>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
+{% for project in projects %}
+<div class="modal fade" id="modal-{{project.id}}" tabindex="-1" aria-labelledby="modal-{{project.id}}"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title testimony-title">{{ project.name }}</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ project.description|striptags }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary read-more" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endfor %}
 
 <div class="contact-section" id="Contact">
     <br>
@@ -54,7 +77,7 @@
     <div class="container-fluide">
         <div class="row">
             <h2 class="title-project">Contact</h2>
-            <p class="contact">Qualité | Résultats | Impréssions</p>
+            <p class="contact">Qualité | Résultats | Impressions</p>
             <section class="contact">
                 <a href="https://www.linkedin.com/in/julien-willette-2939561b6/" class="linkedin-btn" target="_blank">Linkedin</a>
                 <a href="https://github.com/julienWillette" class="contact-btn" target="_blank">Github</a>
@@ -67,5 +90,6 @@
     <br>
     <br>
 </div>
-</body>
+
+
 {% endblock %}
